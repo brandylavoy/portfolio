@@ -42,7 +42,7 @@
     -o-padding-after: 0px;
     -o-padding-start: 0px;
     -o-padding-end: 0px;
-    font-family: 'Merriweather', serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -59,30 +59,55 @@ html {
 }
 */
 
+header img {
+    float: left;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    color: #224C65;
+}
+
 header ul.navBar {
     height: 3rem;
     text-align: right;
     padding: 1rem;
-}
-
-ul .navBar {
     list-style-type: none;
-    margin: 0;
-    padding: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
 }
 
 .navBar li {
     display: inline;
     text-align: right;
     margin: 1rem;
+    font-family: 'Amiko', sans-serif;
+    color: #224C65;
+}
+
+.navBar li a {
+    color: #224C65;
+}
+
+.navBar li a:hover {
+    font-weight: bold;
+}
+
+.navBar li a::after {
+    display: inline;
+    content: attr(title);
+    font-weight: bold;
+    height: 1px;
+    color: transparent;
+    overflow: hidden;
+    visibility: hidden;
+    margin-bottom: -1px;
 }
 
 #hero-area {
     background: url(/images/vineyard-scape.jpg) no-repeat 50%;
     background-size: cover;
     background-attachment: fixed;
-    padding: 230px 0;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    padding: 150px 0;
+    box-shadow: 0 0 8px #224C65;
     position: relative;
     text-align: center;
     max-height: 40rem;
@@ -90,26 +115,23 @@ ul .navBar {
 
 .cd-intro h1 {
     font-size: 2rem;
-    color: aliceblue;
+    color: greenyellow;
+    text-shadow: 3px 3px black;
 }
 
 section.skills,
 .about,
 .projects,
 .contact {
-    border-bottom: #68A9AC solid 1px;
+    border-bottom: #224C65 solid 1px;
     width: 90%;
     margin: 0 auto;
-}
-
-section.about p {
-    padding: 1rem;
 }
 
 section h2 {
     font-family: 'Amiko', sans-serif;
     font-size: 1.5rem;
-    color: #061E44;
+    color: #2E2814;
     text-align: left;
     margin-left: 1rem;
     padding: 1rem;
@@ -118,22 +140,58 @@ section h2 {
 section.skills ul {
     list-style-type: none;
     margin: 0;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
 }
 
 section.skills ul li {
     display: inline;
     margin: 1rem;
+    color: #224C65;
+}
+
+section.about p {
+    padding: 1rem;
+    color: #224C65;
+}
+
+section.about div {
+    text-align: center;
+    font-size: 3rem;
+}
+
+section.about div a i {
+    color: #224C65;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 section.projects {
     text-align: center;
 }
 
-section a img {
-    height: 15rem;
-    padding: 1rem;
-    box-shadow: 5px 5px 2.5px #68A9AC;
-    margin: 1rem;
+section.projects figure {
+    text-align: center;
+    padding-bottom: 1rem;
+    display: inline-block;
+    padding: 00.5rem;
+    box-shadow: 5px 5px 2.5px #224C65;
+    margin: 1.7rem;
 }
+
+section.projects figure a img {
+    height: 15rem;
+    width: 27rem;
+}
+
+section.projects figure figcaption {
+    width: 27rem;
+}
+
+@media only screen and (max-width: 1068px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 480px) {}
+
+@media only screen and (max-width: 320px) {}
