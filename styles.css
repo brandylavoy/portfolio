@@ -89,7 +89,7 @@ header ul.navBar {
 }
 
 #hero-area {
-    background: url(/images/vineyard-scape.jpg) no-repeat 50%;
+    background: url(vineyard-scape.jpg) no-repeat 50%;
     background-size: cover;
     background-attachment: fixed;
     padding: 120px 0;
