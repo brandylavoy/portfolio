@@ -45,6 +45,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    background-color: white;
+}
+
 header img {
     float: left;
     padding-left: 1rem;
@@ -242,6 +249,46 @@ section.projects figure a:active {
 
 section.projects figure figcaption {
     width: 100%;
+}
+
+footer div {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+}
+
+footer div a {
+    padding: 1rem;
+}
+
+
+/* visited link */
+
+footer div a:visited {
+    color: #91B813;
+}
+
+footer div a[href^="mailto"] {
+    color: #91B813;
+}
+
+
+/* mouse over link */
+
+footer div a:hover {
+    color: #224C65;
+}
+
+
+/* selected link */
+
+footer div a:active {
+    color: yellow;
+}
+
+footer div a i {
+    padding-right: 0.5rem;
 }
 
 @media only screen and (max-width: 1068px) {
