@@ -8,15 +8,44 @@
     <link href="https://fonts.googleapis.com/css?family=Amiko" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+
+                var target = this.hash,
+                    $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top - 80
+                }, 900, 'swing', function() {
+                    window.location.hash = target;
+                });
+            });
+        });
+    </script>
+    <style>
+        body,
+        html,
+        {
+            height: 100%;
+        }
+
+        section {
+            min-height: 100%;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <img src="images/logo.png" alt="Brandy La Voy">
         <ul class="navBar">
-            <li><a href="#skills">SKILLS</a></li>
+
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#skills">SKILLS</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
     </header>
@@ -28,7 +57,10 @@
                         <div class="block wow fadeInUp" data-wow-delay=".3s">
                             <!-- Slider -->
                             <section class="cd-intro">
-                                <h1>Hi, I'm Brandy. A JavaScript Developer Based in the San Francisco Bay Area</h1>
+                                <h1>
+                                    <p>Hi, I'm Brandy.</p>
+                                    <p> A JavaScript Developer Based in the San Francisco Bay Area</p>
+                                </h1>
                             </section>
                             <!-- cd-intro -->
                             <!-- /.slider -->
@@ -38,104 +70,67 @@
                 </div>
             </div>
         </section>
-        <section class="skills" id="skills">
-            <h2><i class="fa fa-laptop" aria-hidden="true"></i> SKILLS</h2>
-            <ul>
-                <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>HTML5 and CSS3</li>
-                <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>JavaScript and jQuery</li>
-                <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>AJAX, JSON and API</li>
-                <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>Node.js</li>
-                <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>React.js</li>
-                <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>Git and GitHub</li>
-                <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>MongoDB</li>
-                <li><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>Algorithms and Data Structures</li>
-            </ul>
-        </section>
+
         <section class="about" id="about">
             <h2><i class="fa fa-info-circle" aria-hidden="true"></i> ABOUT</h2>
-            <p>I am a newly minted graduate of the Thinkful Front End Web Development Bootcamp. I am excited to start using my new skills with JavaScript, HTML, CSS and React, just to name a few.</p>
+            <p>I am a newly minted graduate of the Thinkful Front End Web Development Bootcamp. I am excited to start using my new skills with JavaScript, HTML, CSS and React, just to name a few. I have been busy with the bootcamp, and a full-time job over the past six months and look forward to bringing that level of commitment to my next opportunity. I am ready to begin making a contribution to a development team from day one. When not practicing my coding skills, I can be found training for half-marathons, spending time with friends and family, and relaxing with my dogs. </p>
             <!--            <img src="images/seo-2078785_960_720.png" alt="responsive web design">-->
 
-            <div>
-                <a href="https://www.linkedin.com/in/brandylavoy/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                <a href="https://github.com/brandylavoy"><i class="fa fa-github" aria-hidden="true"></i></a> </div>
+
         </section>
         <section class="projects" id="projects">
             <h2><i class="fa fa-list" aria-hidden="true"></i> PROJECTS</h2>
 
             <figure>
-                <a href="https://final-capstone-bart-schedule.herokuapp.com/">
-                    <img src="/images/landing-page-no-results.png" alt="BART API app">
-                </a>
-                <a href="https://github.com/brandylavoy/final-capstone-bart-schedule"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <figcaption>A full stack project utilzing HTML, CSS, JavaScript, Node.js, jQuery, React.js</figcaption>
+                <img src="landing-page-no-results.png" alt="BART API app">
+                <a href="https://final-capstone-bart-schedule.herokuapp.com/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>  </a>
+                <a href="https://github.com/brandylavoy/final-capstone-bart-schedule" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <figcaption>A full stack project utilzing HTML, CSS, JavaScript, Node.js, jQuery, React.js.</figcaption>
+                <figcaption class="description">Look-up BART train schedules through the Bart.gov API.</figcaption>
             </figure>
             <figure>
-                <a href=" https://find-and-register-for-events.herokuapp.com/">
-                    <img src="/images/active-api.png" alt="Active API app">
+                <img src="active-api.png" alt="Active API app">
+                <a href=" https://find-and-register-for-events.herokuapp.com/" target="_blank">
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
                 </a>
-                <a href="https://github.com/brandylavoy/node-capstone-find-and-register-for-events"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <figcaption>A full stack project utilzing HTML, CSS, JavaScript, Node.js, jQuery</figcaption>
+                <a href="https://github.com/brandylavoy/node-capstone-find-and-register-for-events" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <figcaption>A full stack project utilzing HTML, CSS, JavaScript, Node.js, jQuery.</figcaption>
+                <figcaption class="description">Search the Acitve.com API for running events nearby.</figcaption>
             </figure>
             <figure>
-                <a href="https://brandylavoy.github.io/api-capstone-recipe/">
-                    <img src="/images/Yummly-API.png" alt="Recipe Finder">
+                <img src="Yummly-API.png" alt="Recipe Finder">
+                <a href="https://brandylavoy.github.io/api-capstone-recipe/" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i>
                 </a>
-                <a href="https://github.com/brandylavoy/api-capstone-recipe"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <figcaption>A full stack project utilzing HTML, CSS, JavaScript, jQuery</figcaption>
-            </figure>
-            <figure>
-                <a href="https://brandylavoy.github.io/js-quiz-app/">
-                    <img src="/images/wine-quiz-home.png" alt="Wine Quiz App">
-                </a>
-                <a href="https://github.com/brandylavoy/js-quiz-app"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <figcaption>A front end project utilzing HTML, CSS, JavaScript, jQuery</figcaption>
+                <a href="https://github.com/brandylavoy/api-capstone-recipe" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <figcaption>A full stack project utilzing HTML, CSS, JavaScript, jQuery.</figcaption>
+                <figcaption class="description">Find recipes based on dietary restrictions via the Yummly.com API.</figcaption>
             </figure>
         </section>
 
-
+        <section class="skills" id="skills">
+            <h2><i class="fa fa-laptop" aria-hidden="true"></i> SKILLS</h2>
+            <ul>
+                <li>HTML5 and CSS3</li>
+                <li>JavaScript and jQuery</li>
+                <li>AJAX, JSON and API</li>
+                <li>Node.js</li>
+                <li>React.js</li>
+                <li>Git and GitHub</li>
+                <li>MongoDB</li>
+                <li>Algorithms and Data Structures</li>
+            </ul>
+        </section>
 
 
     </main>
-    <footer class="footer">      <section class="contact" id="contact">
-        <h2><i class="fa fa-envelope" aria-hidden="true"></i> CONTACT</h2>
-        <div id="wufoo-msuiz5g0ofmi2d">
-            Fill out my <a href="https://brandylavoy.wufoo.com/forms/msuiz5g0ofmi2d">online form</a>.
-        </div>
-        <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">Use <a href="http://www.wufoo.com/gallery/templates/">Wufoo templates</a> to make your own HTML forms.</div>
-        <script type="text/javascript">
-            var msuiz5g0ofmi2d;
-            (function(d, t) {
-                var s = d.createElement(t),
-                    options = {
-                        'userName': 'brandylavoy',
-                        'formHash': 'msuiz5g0ofmi2d',
-                        'autoResize': true,
-                        'height': '577',
-                        'async': true,
-                        'host': 'wufoo.com',
-                        'header': 'show',
-                        'ssl': true
-                    };
-                s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-                s.onload = s.onreadystatechange = function() {
-                    var rs = this.readyState;
-                    if (rs)
-                        if (rs != 'complete')
-                            if (rs != 'loaded') return;
-                    try {
-                        msuiz5g0ofmi2d = new WufooForm();
-                        msuiz5g0ofmi2d.initialize(options);
-                        msuiz5g0ofmi2d.display();
-                    } catch (e) {}
-                };
-                var scr = d.getElementsByTagName(t)[0],
-                    par = scr.parentNode;
-                par.insertBefore(s, scr);
-            })(document, 'script');
-
-        </script>
-
+    <footer class="footer">
+        <section class="contact" id="contact">
+            <h2><i class="fa fa-envelope" aria-hidden="true"></i> CONTACT</h2>
+            <div>
+                <a href="https://www.linkedin.com/in/brandylavoy/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i>LinkedIn</a>
+                <a href="https://github.com/brandylavoy" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a>
+                <a href="mailto:brandylavoy@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>Email</a>
+            </div>
         </section>
     </footer>
 </body>
