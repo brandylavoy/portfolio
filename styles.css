@@ -317,7 +317,6 @@ footer div a i {
     section.projects figure {
         text-align: center;
         padding: 0.5rem;
-        box-shadow: 5px 5px 2.5px #224C65;
         width: 750px;
         margin: 1rem auto;
     }
@@ -339,7 +338,6 @@ footer div a i {
     section.projects figure {
         text-align: center;
         padding: 0.5rem;
-        box-shadow: 5px 5px 2.5px #224C65;
         width: 100%;
     }
     section.projects figure img {
@@ -375,7 +373,6 @@ footer div a i {
         margin-left: 0;
         margin-right: 0;
         margin-bottom: 0.5rem;
-        box-shadow: 5px 5px 2.5px #224C65;
         width: 100%;
     }
     footer div a {
@@ -393,7 +390,6 @@ footer div a i {
     section.projects figure {
         text-align: center;
         padding: 0.5rem;
-        box-shadow: 5px 5px 2.5px #224C65;
         width: 100%;
     }
 }
